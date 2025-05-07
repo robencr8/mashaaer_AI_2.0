@@ -1,0 +1,83 @@
+{
+  "onboarding": {
+    "steps": [
+      {
+        "title": "Bienvenue sur l'Assistant Intelligent !",
+        "content": "Votre assistant personnel qui comprend et répond à vos émotions. Découvrons les fonctionnalités clés.",
+        "image": "🤖"
+      },
+      {
+        "title": "Entrée Vocale",
+        "content": "Vous pouvez parler directement à l'assistant en cliquant sur le bouton microphone 🎤 en bas de l'écran.",
+        "image": "🎤"
+      },
+      {
+        "title": "Écouter les Réponses",
+        "content": "L'assistant lira les réponses automatiquement. Vous pouvez activer ou désactiver cette fonctionnalité en cliquant sur le bouton son 🔊.",
+        "image": "🔊"
+      },
+      {
+        "title": "Personnaliser les Paramètres",
+        "content": "Cliquez sur le bouton paramètres ⚙️ pour personnaliser votre dialecte, ton et voix préférés.",
+        "image": "⚙️"
+      },
+      {
+        "title": "Analyse des Émotions",
+        "content": "L'assistant analyse vos émotions à travers vos messages et répond de manière appropriée. Vous remarquerez des étiquettes d'émotion avec chaque message.",
+        "image": "😊"
+      }
+    ],
+    "buttons": {
+      "next": "Suivant",
+      "previous": "Précédent",
+      "skip": "Passer",
+      "finish": "Terminer"
+    }
+  },
+  "tooltips": {
+    "settings": "Cliquez ici pour personnaliser les paramètres de l'assistant comme le dialecte, le ton et la voix préférée",
+    "clearChat": "Cliquez ici pour effacer tous les messages et commencer une nouvelle conversation",
+    "voiceInput": "Cliquez ici pour parler directement à l'assistant en utilisant le microphone",
+    "inputField": "Vous pouvez taper n'importe quelle question ou demande ici. Essayez des questions comme 'Comment allez-vous ?' ou 'Quel temps fait-il aujourd'hui ?' ou 'Racontez-moi une histoire'",
+    "sendButton": "Cliquez ici pour envoyer votre message à l'assistant",
+    "ttsToggleOn": "Cliquez pour désactiver la lecture automatique des réponses",
+    "ttsToggleOff": "Cliquez pour activer la lecture automatique des réponses",
+    "ttsMode": "Cliquez pour basculer entre les modes de synthèse vocale (Flask TTS ou Web Speech API)",
+    "emotionTag": "Ce sont les émotions détectées dans le message. L'assistant analyse les émotions pour fournir une réponse plus empathique.",
+    "modelTag": "C'est le modèle utilisé pour générer cette réponse. Il peut s'agir d'un modèle local ou d'un modèle Flask backend.",
+    "timestamp": "C'est l'heure à laquelle le message a été envoyé"
+  },
+  "ui": {
+    "assistantTitle": "Assistant Intelligent",
+    "inputPlaceholder": "Entrez votre demande ici...",
+    "listening": "🎤 Écoute...",
+    "voiceError": "⚠️ Erreur de reconnaissance vocale. Veuillez réessayer.",
+    "voiceNotSupported": "⚠️ La reconnaissance vocale n'est pas prise en charge dans ce navigateur.",
+    "processingError": "Désolé, une erreur s'est produite lors du traitement de votre message. Veuillez réessayer.",
+    "welcomeMessage": "Bonjour ! Comment puis-je vous aider aujourd'hui ?",
+    "clearChatMessage": "Chat effacé. Comment puis-je vous aider ?",
+    "emptyChat": "Commencez une nouvelle conversation avec l'Assistant Intelligent",
+    "testVoice": "Tester la Voix",
+    "testVoiceMessage": "Ceci est un exemple de la voix sélectionnée.",
+    "languageToggle": "العربية",
+    "languageSettings": "Paramètres de Langue",
+    "browserDetectedLanguage": "Langue du navigateur détectée : Arabe",
+    "browserDetectedLanguageEn": "Langue du navigateur détectée : Anglais",
+    "useDetectedLanguage": "Utiliser la langue du navigateur",
+    "languageNotification": "La langue a été automatiquement définie en fonction des paramètres de votre navigateur. Vous pouvez la changer à tout moment.",
+    "dismissNotification": "Fermer",
+    "languageName": "Français",
+    "languageSelector": "Sélectionner la langue :",
+    "switchLanguage": "Changer de Langue",
+    "emotionAwareLanguageSuggestion": "Il semble que vous préfériez peut-être une autre langue. Souhaitez-vous passer au {language} ?",
+    "yes": "Oui",
+    "no": "Non",
+    "installApp": "Installez l'application Mashaaer maintenant pour une expérience hors ligne !"
+  },
+  "meta": {
+    "name": "French",
+    "nativeName": "Français",
+    "dir": "ltr",
+    "flag": "🇫🇷"
+  }
+}

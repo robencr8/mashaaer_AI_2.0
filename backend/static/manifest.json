@@ -1,0 +1,40 @@
+{
+  "short_name": "Mashaaer",
+  "name": "Mashaaer Enhanced Arabic AI Assistant",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "dir": "rtl",
+  "lang": "ar",
+  "orientation": "portrait",
+  "scope": "/",
+  "description": "مساعد ذكي عربي مع كشف المشاعر وواجهة كونية",
+  "categories": ["productivity", "utilities", "ai", "assistant"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "بدء محادثة جديدة",
+      "short_name": "محادثة جديدة",
+      "description": "بدء محادثة جديدة مع مشاعر",
+      "url": "/?newChat=true"
+    }
+  ]
+}

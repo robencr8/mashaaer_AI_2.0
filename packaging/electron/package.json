@@ -1,0 +1,100 @@
+{
+  "name": "mashaaer-enhanced-electron",
+  "version": "1.0.0",
+  "description": "Electron wrapper for Mashaaer Enhanced Arabic AI Assistant",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "cross-env NODE_ENV=development electron .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux"
+  },
+  "keywords": [
+    "mashaaer",
+    "AI",
+    "emotions",
+    "assistant",
+    "arabic",
+    "voice",
+    "cosmic",
+    "electron"
+  ],
+  "author": "Mashaaer Enhanced Team",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^28.2.0",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "electron-log": "^5.0.3",
+    "electron-updater": "^6.1.7"
+  },
+  "build": {
+    "appId": "com.mashaaer.enhanced",
+    "productName": "Mashaaer Enhanced",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "icon.ico",
+      "package.json",
+      "license.html",
+      "splash.png",
+      "installer-background.png",
+      {
+        "from": "../../build",
+        "to": "build"
+      }
+    ],
+    "extraResources": [
+      {
+        "from": "../../docs",
+        "to": "docs"
+      },
+      {
+        "from": "../../backend",
+        "to": "backend"
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "icon.ico",
+      "publisherName": "Mashaaer Enhanced Team"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Mashaaer Enhanced",
+      "license": "license.html",
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico",
+      "installerHeaderIcon": "icon.ico",
+      "installerSidebar": "installer-background.png",
+      "uninstallerSidebar": "installer-background.png",
+      "include": "installer.nsh",
+      "artifactName": "${productName}-Setup-${version}.${ext}"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "icon": "icon.icns"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility"
+    }
+  }
+}

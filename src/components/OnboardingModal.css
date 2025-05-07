@@ -1,0 +1,277 @@
+/* OnboardingModal.css */
+
+.onboarding-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(40, 42, 54, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Language direction support */
+[dir="ltr"] .onboarding-modal {
+  text-align: left;
+}
+
+[dir="rtl"] .onboarding-modal {
+  text-align: right;
+}
+
+.onboarding-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.onboarding-modal {
+  background-color: rgba(68, 71, 90, 0.95);
+  border-radius: 16px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  color: #f8f8f2;
+  text-align: center;
+  direction: rtl;
+  animation: modalAppear 0.5s ease;
+  overflow: hidden;
+}
+
+@keyframes modalAppear {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Star background effect */
+.onboarding-modal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 60px 110px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 80px 150px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 100px 190px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 120px 230px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 140px 270px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 160px 310px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 180px 350px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 200px 390px, #ffffff, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 400px;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #ff79c6;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.close-button:hover {
+  transform: scale(1.2);
+  color: #ff92d0;
+}
+
+.step-indicator {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.step-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(189, 147, 249, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.step-dot.active {
+  background-color: #bd93f9;
+  transform: scale(1.2);
+}
+
+.step-dot:hover {
+  background-color: rgba(189, 147, 249, 0.7);
+}
+
+.step-content {
+  margin-bottom: 30px;
+}
+
+.step-image {
+  font-size: 60px;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.step-content h2 {
+  color: #ff79c6;
+  margin-bottom: 15px;
+  font-size: 24px;
+  text-shadow: 0 0 10px rgba(255, 121, 198, 0.3);
+}
+
+.step-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #f8f8f2;
+}
+
+.step-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.previous-button,
+.next-button,
+.skip-button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.previous-button {
+  background-color: transparent;
+  border: 1px solid #6272a4;
+  color: #6272a4;
+}
+
+.previous-button:hover {
+  background-color: rgba(98, 114, 164, 0.1);
+  color: #8be9fd;
+  border-color: #8be9fd;
+}
+
+.next-button {
+  background-color: #bd93f9;
+  border: none;
+  color: #282a36;
+  font-weight: bold;
+}
+
+.next-button:hover {
+  background-color: #a679f7;
+  transform: translateY(-2px);
+}
+
+.skip-button {
+  background-color: transparent;
+  border: none;
+  color: #6272a4;
+  font-size: 14px;
+}
+
+.skip-button:hover {
+  color: #ff79c6;
+  text-decoration: underline;
+}
+
+/* Language toggle button */
+.language-toggle-button {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: rgba(189, 147, 249, 0.2);
+  border: 1px solid #bd93f9;
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: #bd93f9;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.language-toggle-button:hover {
+  background: rgba(189, 147, 249, 0.4);
+  transform: translateY(-2px);
+}
+
+[dir="rtl"] .language-toggle-button {
+  left: auto;
+  right: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .onboarding-modal {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .step-image {
+    font-size: 50px;
+  }
+
+  .step-content h2 {
+    font-size: 20px;
+  }
+
+  .step-content p {
+    font-size: 14px;
+  }
+
+  .previous-button,
+  .next-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .onboarding-modal {
+    padding: 15px;
+  }
+
+  .step-image {
+    font-size: 40px;
+  }
+
+  .step-content h2 {
+    font-size: 18px;
+  }
+
+  .step-actions {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .previous-button,
+  .next-button,
+  .skip-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}

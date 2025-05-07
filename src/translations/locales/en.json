@@ -1,0 +1,83 @@
+{
+  "onboarding": {
+    "steps": [
+      {
+        "title": "Welcome to the Smart Assistant!",
+        "content": "Your personal assistant that understands and responds to your emotions. Let's explore the key features.",
+        "image": "🤖"
+      },
+      {
+        "title": "Voice Input",
+        "content": "You can speak directly to the assistant by clicking the microphone button 🎤 at the bottom of the screen.",
+        "image": "🎤"
+      },
+      {
+        "title": "Listen to Responses",
+        "content": "The assistant will read responses automatically. You can enable or disable this feature by clicking the sound button 🔊.",
+        "image": "🔊"
+      },
+      {
+        "title": "Customize Settings",
+        "content": "Click the settings button ⚙️ to customize your preferred dialect, tone, and voice.",
+        "image": "⚙️"
+      },
+      {
+        "title": "Emotion Analysis",
+        "content": "The assistant analyzes your emotions through your messages and responds appropriately. You'll notice emotion tags with each message.",
+        "image": "😊"
+      }
+    ],
+    "buttons": {
+      "next": "Next",
+      "previous": "Previous",
+      "skip": "Skip",
+      "finish": "Finish"
+    }
+  },
+  "tooltips": {
+    "settings": "Click here to customize assistant settings such as dialect, tone, and preferred voice",
+    "clearChat": "Click here to clear all messages and start a new conversation",
+    "voiceInput": "Click here to speak directly to the assistant using the microphone",
+    "inputField": "You can type any question or request here. Try questions like 'How are you?' or 'What's the weather today?' or 'Tell me a story'",
+    "sendButton": "Click here to send your message to the assistant",
+    "ttsToggleOn": "Click to disable automatic reading of responses",
+    "ttsToggleOff": "Click to enable automatic reading of responses",
+    "ttsMode": "Click to toggle between text-to-speech modes (Flask TTS or Web Speech API)",
+    "emotionTag": "These are the emotions detected in the message. The assistant analyzes emotions to provide a more empathetic response.",
+    "modelTag": "This is the model used to generate this response. It could be a local model or a Flask backend model.",
+    "timestamp": "This is the time when the message was sent"
+  },
+  "ui": {
+    "assistantTitle": "Smart Assistant",
+    "inputPlaceholder": "Enter your request here...",
+    "listening": "🎤 Listening...",
+    "voiceError": "⚠️ Voice recognition error. Please try again.",
+    "voiceNotSupported": "⚠️ Voice recognition is not supported in this browser.",
+    "processingError": "Sorry, an error occurred while processing your message. Please try again.",
+    "welcomeMessage": "Hello! How can I help you today?",
+    "clearChatMessage": "Chat cleared. How can I help you?",
+    "emptyChat": "Start a new conversation with the Smart Assistant",
+    "testVoice": "Test Voice",
+    "testVoiceMessage": "This is an example of the selected voice.",
+    "languageToggle": "العربية",
+    "languageSettings": "Language Settings",
+    "browserDetectedLanguage": "Browser language detected: Arabic",
+    "browserDetectedLanguageEn": "Browser language detected: English",
+    "useDetectedLanguage": "Use browser language",
+    "languageNotification": "Language was automatically set based on your browser settings. You can change it anytime.",
+    "dismissNotification": "Dismiss",
+    "languageName": "English",
+    "languageSelector": "Select language:",
+    "switchLanguage": "Switch Language",
+    "emotionAwareLanguageSuggestion": "It looks like you may prefer another language. Would you like to switch to {language}?",
+    "yes": "Yes",
+    "no": "No",
+    "installApp": "Install Mashaaer app now for offline experience!"
+  },
+  "meta": {
+    "name": "English",
+    "nativeName": "English",
+    "dir": "ltr",
+    "flag": "🇺🇸"
+  }
+}

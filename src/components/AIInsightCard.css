@@ -1,0 +1,213 @@
+/* AIInsightCard Component Styles */
+.ai-insight-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 15px 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  direction: rtl;
+  max-width: 600px;
+  border-right: 4px solid #bd93f9;
+}
+
+.ai-insight-header {
+  background-color: #f8f9fa;
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.ai-insight-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.ai-insight-close-button {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.ai-insight-close-button:hover {
+  color: #333;
+}
+
+.ai-insight-content {
+  padding: 15px;
+}
+
+/* Loading state */
+.ai-insight-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.ai-insight-loading-spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #bd93f9;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.ai-insight-loading p {
+  color: #666;
+  margin: 0;
+}
+
+/* Emotion section */
+.ai-insight-emotion {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.ai-insight-emotion-icon {
+  font-size: 2.5rem;
+  margin-left: 15px;
+  line-height: 1;
+}
+
+.ai-insight-emotion-details {
+  flex: 1;
+}
+
+.ai-insight-emotion-details h4 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.ai-insight-emotion-details p {
+  margin: 0 0 8px 0;
+  color: #666;
+  font-weight: 500;
+}
+
+.ai-insight-intensity-bar {
+  height: 6px;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.ai-insight-intensity-fill {
+  height: 100%;
+  background-color: #bd93f9;
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+/* Intent section */
+.ai-insight-intent {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.ai-insight-intent h4 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.ai-insight-intent p {
+  margin: 0;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Summary section */
+.ai-insight-summary h4 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.ai-insight-summary p {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Toggle button container */
+.ai-insight-toggle-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 15px 0;
+  direction: rtl;
+}
+
+.ai-insight-toggle-button {
+  background-color: #bd93f9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.ai-insight-toggle-button:hover {
+  background-color: #a77bfa;
+}
+
+/* RTL support for English language */
+html[dir="ltr"] .ai-insight-card {
+  direction: ltr;
+  border-right: none;
+  border-left: 4px solid #bd93f9;
+}
+
+html[dir="ltr"] .ai-insight-emotion-icon {
+  margin-left: 0;
+  margin-right: 15px;
+}
+
+html[dir="ltr"] .ai-insight-toggle-container {
+  direction: ltr;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ai-insight-card {
+    max-width: 100%;
+  }
+  
+  .ai-insight-emotion {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .ai-insight-emotion-icon {
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+  
+  .ai-insight-emotion-details {
+    width: 100%;
+  }
+}

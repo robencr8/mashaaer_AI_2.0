@@ -1,0 +1,6 @@
+@echo off
+echo Running file unlocking script...
+powershell -ExecutionPolicy Bypass -File "%~dp0unlock-files.ps1"
+echo.
+echo Press any key to exit...
+pause > nul

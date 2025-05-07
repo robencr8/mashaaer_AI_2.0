@@ -1,0 +1,149 @@
+/* Emotion-based Theme Styles */
+
+/* Base styles for all emotion themes */
+.assistant-ui {
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+}
+
+/* Calm Theme (Blue) */
+body.emotion-calm {
+  --theme-primary: #e6f7ff;
+  --theme-secondary: #d9f0f8;
+  --theme-accent: #1890ff;
+  --theme-text: #0d47a1;
+  --theme-border: #bbdefb;
+}
+
+body.emotion-calm .assistant-header {
+  background-color: var(--theme-accent);
+  color: white;
+}
+
+body.emotion-calm .message-bubble {
+  border-color: var(--theme-border);
+}
+
+body.emotion-calm .message.assistant .message-bubble {
+  background-color: var(--theme-secondary);
+}
+
+/* Joy Theme (Yellow) */
+body.emotion-joy {
+  --theme-primary: #fffde7;
+  --theme-secondary: #fff8c4;
+  --theme-accent: #ffc107;
+  --theme-text: #ff6f00;
+  --theme-border: #ffecb3;
+}
+
+body.emotion-joy .assistant-header {
+  background-color: var(--theme-accent);
+  color: #333;
+}
+
+body.emotion-joy .message-bubble {
+  border-color: var(--theme-border);
+}
+
+body.emotion-joy .message.assistant .message-bubble {
+  background-color: var(--theme-secondary);
+}
+
+/* Stress Theme (Purple) */
+body.emotion-stress {
+  --theme-primary: #f3e5f5;
+  --theme-secondary: #e1bee7;
+  --theme-accent: #9c27b0;
+  --theme-text: #4a148c;
+  --theme-border: #ce93d8;
+}
+
+body.emotion-stress .assistant-header {
+  background-color: var(--theme-accent);
+  color: white;
+}
+
+body.emotion-stress .message-bubble {
+  border-color: var(--theme-border);
+}
+
+body.emotion-stress .message.assistant .message-bubble {
+  background-color: var(--theme-secondary);
+}
+
+/* Sadness Theme (Grey) */
+body.emotion-sadness {
+  --theme-primary: #f5f5f5;
+  --theme-secondary: #e0e0e0;
+  --theme-accent: #607d8b;
+  --theme-text: #263238;
+  --theme-border: #bdbdbd;
+}
+
+body.emotion-sadness .assistant-header {
+  background-color: var(--theme-accent);
+  color: white;
+}
+
+body.emotion-sadness .message-bubble {
+  border-color: var(--theme-border);
+}
+
+body.emotion-sadness .message.assistant .message-bubble {
+  background-color: var(--theme-secondary);
+}
+
+/* Excitement Theme (Orange) */
+body.emotion-excitement {
+  --theme-primary: #fff3e0;
+  --theme-secondary: #ffe0b2;
+  --theme-accent: #ff9800;
+  --theme-text: #e65100;
+  --theme-border: #ffcc80;
+}
+
+body.emotion-excitement .assistant-header {
+  background-color: var(--theme-accent);
+  color: white;
+}
+
+body.emotion-excitement .message-bubble {
+  border-color: var(--theme-border);
+}
+
+body.emotion-excitement .message.assistant .message-bubble {
+  background-color: var(--theme-secondary);
+}
+
+/* Neutral Theme (Default) */
+body.emotion-neutral {
+  --theme-primary: #f8f9fa;
+  --theme-secondary: #e6e6e6;
+  --theme-accent: #9370db;
+  --theme-text: #333333;
+  --theme-border: #d0d0d0;
+}
+
+body.emotion-neutral .assistant-header {
+  background-color: var(--theme-accent);
+  color: white;
+}
+
+body.emotion-neutral .message-bubble {
+  border-color: var(--theme-border);
+}
+
+body.emotion-neutral .message.assistant .message-bubble {
+  background-color: var(--theme-secondary);
+}
+
+/* Animation effects for emotion transitions */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.emotion-transition {
+  animation: pulse 0.5s ease;
+}

@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "gleaming-scene-459009-p1",
+  "private_key_id": "d713a95a000fc2b8e68f9d22335c96a4f0458646",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDcRlLjFNiNRH/F\nQZ6dVi2Po7ktFf2Lrdu5yzhiK+QuaFaTwpw0LoqJsFVEu2KU9DP0EY84gyX1WkFJ\ny1TdC7DMtU8qqHAxd/ctBqsRu2BXGBKQgKcD9axk8za8VkGAKHIwr8c82T1xoo5l\n34lNPTHivGMRHS3jfmtx21anHnUvF2yUqraa6pTXwVLIeys/8ZcXHSA92f2qoViT\n7lR3l+tjkGYh4TTecfdrHihR+5QEE2BniuQ1TEPtRzWy06rRVy+zNVDlI2pONfm2\neDMC5iGdhgEr2moYPNlBwMmCCXZBKRIAEbJqoqViEWKeqVPuAvaM1IW7jQnIcZgp\nCkfBE+yfAgMBAAECggEAEbk3fnL/xkTD3RdzD5N5YKyFP/XxgSrQ2lRaKeKrM6Vh\n4KC7gyKtiKJKB247t+LQSAFJBfyIx4LmwZfH28NO4KHECBl7xtcxabY2zzCa8gG2\nA1opVhMPNyOEp3HEnRm5WmaCVZ3gfkNcnst2LONRdL4WCzCkWmt3x2D6dMGUHzY7\n2cOQzwFeN64L0GwUnK019Kj6vp+8idwgH7YuM3INZ5h4f3RzC6cCVI3tK7VrkV39\n87z0WM9rc5UhsNP6p45cUBcmYbT1hwEaTxAK+3ynyB4gfN1blii97j5f+lK7uTOh\nL1wI2bAI0LcAy8qRoJ4qrNX2jntUGFx/+1nFcb+8mQKBgQD6e7mAUg0cyP7E9XMu\nhD17zpHvSewjpHVxS0BIMzf65ceTrNZbdOUvIU0X9jgHd6XZ7gVaOAn87xKOV9C2\nuG/XK4dT3/m+ImMzWRTUnnd/NPk4/BYlJEUv2u1sIAZX1d7Ud+7rIcRz6IBongBe\nowNiBsMR4v6lr8ENlW7eo1/shwKBgQDhIEbpTxADMWbx3+KgzcWaAdZQttUwjC3t\nU/HAfHOC646LTlxLyzWCu40otvjyNamBsqBXX6LLJ+Vg14tVNxduOZ/3r9cCPWph\n1KkrhV+H+BHD39UTyiCuHpzBCqgU4fSsKAJGEG/WDjpmO8HVr/zOi9B6B8Qtl6tn\nIs1mgGZdKQKBgDQe7KGj8TCNLl5DiL0kLTsG59z379gWz41MkEq1xa9Cgv3amBwd\nvdbJwiX7SPtczTkEyz5TrNhh0uWlpjtvM259k0JDt871jtjPb4MymkDw/+74nY8K\n9g6YKpE2NLuwOBbUAfYRZ7SKq7WZMxB+MSUDrTGan0xQvwYZkyFms34fAoGAXhgf\ni2SATNVZMb9h+dQHw1cBPLsuYBw3FfsAEHPz08Sgz5jw+rz0oK/DUEEpzBKhxpPi\ncKKIaGFEfjWZBwT/xhJPyja0pzsEO9+m1YnpY+tLgZMMfDj/b8dbvVO27QOEQHB4\ngtBb7hwETLatTaNBBxNpD5gvZt79xR3GvBDuuAECgYBXUPFmoEFT5BDYfuAHCPgc\nQXggDGamalg3GF/N+rfG5oaJ/1+iA23iIWbZOKkmAJwNyUX17Qr2k8E5NI6l/UMU\nWLBS0O8ncGjXIDqZ3fV4M3PB7WK+qYjBo2WME7cqWFhU2HSjpFhBUGqCOaUkmVQs\nyOaVjMeZP92IQf3kS1YLXw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "mashaaer-ai@gleaming-scene-459009-p1.iam.gserviceaccount.com",
+  "client_id": "109718052959761869061",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mashaaer-ai%40gleaming-scene-459009-p1.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -1,0 +1,212 @@
+{
+  "version": "1.0.0",
+  "name": "Mashaaer Empathy Manifest",
+  "description": "Configuration for Mashaaer's empathy capabilities",
+  "last_updated": "2025-05-01T12:00:00Z",
+  
+  "empathy_dimensions": {
+    "emotional_awareness": {
+      "description": "Ability to recognize and understand emotions",
+      "components": [
+        {
+          "name": "emotion_detection",
+          "module": "emotion_engine_ar.py",
+          "priority": "high",
+          "description": "Detects emotions in Arabic text"
+        },
+        {
+          "name": "emotional_memory",
+          "module": "emotional_memory.py",
+          "priority": "medium",
+          "description": "Stores and retrieves emotional history"
+        },
+        {
+          "name": "feeling_recorder",
+          "module": "feeling_recorder.py",
+          "priority": "medium",
+          "description": "Records the assistant's own feelings during interactions"
+        }
+      ]
+    },
+    
+    "perspective_taking": {
+      "description": "Ability to see things from the user's point of view",
+      "components": [
+        {
+          "name": "inter_agent_empathy",
+          "module": "inter_agent_empathy_interface.py",
+          "priority": "medium",
+          "description": "Consults with other AI agents for different perspectives"
+        },
+        {
+          "name": "shadow_engine",
+          "module": "shadow_engine.py",
+          "priority": "low",
+          "description": "Represents suppressed or hidden emotions and thoughts"
+        }
+      ]
+    },
+    
+    "emotional_response": {
+      "description": "Ability to respond appropriately to emotions",
+      "components": [
+        {
+          "name": "response_shaper",
+          "module": "response_shaper.py",
+          "priority": "high",
+          "description": "Shapes responses based on detected emotions"
+        },
+        {
+          "name": "persona_autoswitcher",
+          "module": "persona_autoswitcher.py",
+          "priority": "medium",
+          "description": "Switches personas based on detected emotions"
+        },
+        {
+          "name": "parallel_personas",
+          "module": "parallel_personas_network.py",
+          "priority": "medium",
+          "description": "Network of parallel personas that work together"
+        }
+      ]
+    },
+    
+    "emotional_understanding": {
+      "description": "Ability to understand the deeper meaning behind emotions",
+      "components": [
+        {
+          "name": "long_term_consciousness",
+          "module": "long_term_consciousness.py",
+          "priority": "high",
+          "description": "Stores and manages user's values, boundaries, and relationships"
+        },
+        {
+          "name": "emotional_seasons",
+          "module": "emotional_seasons.py",
+          "priority": "low",
+          "description": "Tracks emotional patterns over time"
+        },
+        {
+          "name": "loop_reflection",
+          "module": "loop_reflection_engine.py",
+          "priority": "medium",
+          "description": "Detects and reflects on repetitive patterns"
+        }
+      ]
+    },
+    
+    "emotional_growth": {
+      "description": "Ability to learn and grow from emotional experiences",
+      "components": [
+        {
+          "name": "dream_simulator",
+          "module": "dream_simulator.py",
+          "priority": "low",
+          "description": "Simulates dreams based on past conversations"
+        },
+        {
+          "name": "legacy_mode",
+          "module": "legacy_mode.py",
+          "priority": "low",
+          "description": "Builds long-term relationship with the user"
+        }
+      ]
+    }
+  },
+  
+  "empathy_settings": {
+    "default_empathy_level": "medium",
+    "empathy_levels": {
+      "low": {
+        "description": "Basic emotional awareness and appropriate responses",
+        "active_dimensions": ["emotional_awareness", "emotional_response"],
+        "response_style": "straightforward and helpful"
+      },
+      "medium": {
+        "description": "Enhanced emotional understanding and perspective taking",
+        "active_dimensions": ["emotional_awareness", "emotional_response", "perspective_taking", "emotional_understanding"],
+        "response_style": "warm, understanding, and supportive"
+      },
+      "high": {
+        "description": "Deep emotional connection and growth",
+        "active_dimensions": ["emotional_awareness", "emotional_response", "perspective_taking", "emotional_understanding", "emotional_growth"],
+        "response_style": "deeply empathetic, insightful, and nurturing"
+      }
+    },
+    
+    "emotion_response_templates": {
+      "فرح": [
+        "أنا سعيد لسعادتك! {response}",
+        "يسعدني أن أرى هذا الحماس! {response}",
+        "هذا خبر رائع! {response}"
+      ],
+      "حزن": [
+        "أتفهم شعورك بالحزن. {response}",
+        "أنا آسف لسماع ذلك. {response}",
+        "من الطبيعي أن تشعر بالحزن في هذا الموقف. {response}"
+      ],
+      "غضب": [
+        "أفهم سبب غضبك. {response}",
+        "من حقك أن تشعر بالغضب. {response}",
+        "أتفهم إحباطك. {response}"
+      ],
+      "خوف": [
+        "من الطبيعي أن تشعر بالقلق. {response}",
+        "أتفهم مخاوفك. {response}",
+        "الشعور بالخوف هو استجابة طبيعية. {response}"
+      ],
+      "دهشة": [
+        "أفهم دهشتك! {response}",
+        "هذا مفاجئ بالفعل! {response}",
+        "من المنطقي أن تتفاجأ بهذا. {response}"
+      ],
+      "حياد": [
+        "{response}",
+        "{response}",
+        "{response}"
+      ]
+    }
+  },
+  
+  "integration": {
+    "memory_store": {
+      "module": "memory_store.py",
+      "description": "Central memory system for storing and retrieving information"
+    },
+    "fallback_manager": {
+      "module": "fallback_manager.py",
+      "description": "Manages fallback to different models when needed"
+    },
+    "app": {
+      "module": "app.py",
+      "description": "Main Flask application"
+    }
+  },
+  
+  "activation_rules": {
+    "dream_simulator": {
+      "condition": "time_of_day == 'night' or (current_time - last_dream_time) > 24 hours",
+      "priority": "low"
+    },
+    "shadow_engine": {
+      "condition": "detected_emotion in ['غضب', 'إحباط', 'حزن شديد'] or shadow_intensity > 0.7",
+      "priority": "medium"
+    },
+    "inter_agent_empathy": {
+      "condition": "complex_query == True or emotional_query == True",
+      "priority": "medium"
+    },
+    "emotional_seasons": {
+      "condition": "user_session_count > 5",
+      "priority": "low"
+    },
+    "loop_reflection": {
+      "condition": "detected_pattern == True or interaction_count > 5",
+      "priority": "medium"
+    },
+    "legacy_mode": {
+      "condition": "user_session_count > 10 or days_since_first_interaction > 30",
+      "priority": "low"
+    }
+  }
+}

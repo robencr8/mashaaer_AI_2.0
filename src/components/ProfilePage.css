@@ -1,0 +1,251 @@
+/* Profile Page Styles */
+.profile-verification-status {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  direction: rtl;
+}
+
+.verification-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px 0;
+}
+
+.verification-item:last-child {
+  margin-bottom: 0;
+}
+
+.verification-item span {
+  margin-right: 10px;
+}
+
+.verified {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.not-verified {
+  color: #f44336;
+  font-weight: bold;
+}
+
+.verify-button {
+  margin-right: auto;
+  background-color: #bd93f9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.verify-button:hover {
+  background-color: #a77bfa;
+}
+
+.verify-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.verify-button.whatsapp-button {
+  background-color: #25D366;
+}
+
+.verify-button.whatsapp-button:hover {
+  background-color: #128C7E;
+}
+
+.otp-verification-form {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f0f8ff;
+  border-radius: 5px;
+  border-right: 4px solid #bd93f9;
+  direction: rtl;
+}
+
+.otp-verification-form h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.otp-verification-form p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+/* Resend OTP Button Styles */
+.resend-otp-container {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.resend-otp-button {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.resend-otp-button:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+.resend-otp-button:disabled {
+  background-color: #f5f5f5;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.resend-otp-hint {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.auth-success-message {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  text-align: center;
+  direction: rtl;
+}
+
+/* Add some spacing between sections */
+.auth-form h3 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  color: #333;
+}
+
+/* WhatsApp QR Container */
+.whatsapp-qr-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  direction: rtl;
+}
+
+.qr-header {
+  margin-bottom: 20px;
+}
+
+.qr-header h3 {
+  color: #128C7E;
+  margin-bottom: 5px;
+}
+
+.qr-code-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 20px;
+  border: 1px solid #eee;
+}
+
+.qr-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.qr-instructions {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.qr-instructions ol {
+  padding-right: 20px;
+}
+
+.qr-instructions li {
+  margin-bottom: 8px;
+}
+
+.qr-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.refresh-qr-btn, .cancel-qr-btn {
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+
+.refresh-qr-btn {
+  background-color: #25D366;
+  color: white;
+}
+
+.cancel-qr-btn {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.fake-qr-code {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 100%;
+  height: 100%;
+}
+
+.qr-pixel {
+  width: 100%;
+  height: 100%;
+}
+
+.qr-pixel.black {
+  background-color: #000;
+}
+
+.qr-pixel.white {
+  background-color: #fff;
+}
+
+.qr-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #25D366;
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: bold;
+}

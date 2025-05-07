@@ -1,0 +1,130 @@
+/**
+ * App Component
+ * 
+ * This is the main component of the application.
+ * It uses the services context to access all services.
+ */
+
+// Import React and hooks
+import React, { useState, useEffect } from 'react';
+
+// Import services context
+import { useServices } from './context/services-context';
+
+// Import styles
+import './App.css';
+
+const App = () => {
+  // Get services from context
+  const {
+    configService,
+    assistantService,
+    emotionService,
+    apiService,
+    voiceService,
+    memoryService,
+    themeService
+  } = useServices();
+
+  // Component state
+  const [prompt, setPrompt] = useState('');
+  const [response, setResponse] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [userProfile, setUserProfile] = useState({
+    preferredDialect: 'khaliji',
+    preferredTone: 'cheerful',
+    preferredVoiceProfile: 'GULF_FEMALE_ARIA',
+  });
+
+  // Load user profile from config service
+  useEffect(() => {
+    if (configService) {
+      setUserProfile({
+        preferredDialect: configService.get('assistant.defaultDialect', 'khaliji'),
+        preferredTone: configService.get('assistant.defaultTone', 'cheerful'),
+        preferredVoiceProfile: configService.get('assistant.defaultVoiceProfile', 'GULF_FEMALE_ARIA'),
+      });
+    }
+  }, [configService]);
+
+  // Update assistant service when user profile changes
+  useEffect(() => {
+    if (assistantService) {
+      assistantService.setUserProfile(userProfile);
+    }
+  }, [assistantService, userProfile]);
+
+  /**
+   * Handle user request
+   */
+  const handleRequest = async () => {
+    if (!prompt.trim()) return;
+    
+    try {
+      setLoading(true);
+      
+      // Process the message with the assistant service
+      const result = await assistantService.handleUserMessage(prompt);
+      
+      // Update the response
+      setResponse(result.text);
+      
+      // Clear the prompt
+      setPrompt('');
+    } catch (error) {
+      console.error('Error handling request:', error);
+      setResponse('❌ حدث خطأ أثناء معالجة الطلب.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  /**
+   * Handle key press
+   * @param {React.KeyboardEvent} event - Keyboard event
+   */
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      handleRequest();
+    }
+  };
+
+  return (
+    <div className="app-container">
+      <h1 className="app-title">اختبار المساعد الصوتي</h1>
+
+      <div className="input-container">
+        <input
+          type="text"
+          className="prompt-input"
+          placeholder="أدخل الطلب هنا"
+          value={prompt}
+          onChange={(e) => setPrompt(e.target.value)}
+          onKeyPress={handleKeyPress}
+        />
+
+        <button
+          className="submit-button"
+          onClick={handleRequest}
+          disabled={loading}
+        >
+          إرسال
+        </button>
+      </div>
+
+      <div className="response-container">
+        {loading ? (
+          <div className="loading-indicator">
+            <div className="loading-spinner"></div>
+          </div>
+        ) : (
+          <div id="response-box" className="response-box">
+            {response || 'أهلاً! كيف يمكنني مساعدتك اليوم؟'}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default App;

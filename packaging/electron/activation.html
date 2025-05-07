@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mashaaer Enhanced - License Activation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .content {
+            flex: 1;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        h2 {
+            color: #3498db;
+            margin-top: 0;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        .error {
+            color: #e74c3c;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        
+        .success {
+            color: #27ae60;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        
+        .footer {
+            background-color: #ecf0f1;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+        
+        .key-format {
+            font-family: monospace;
+            background-color: #f8f9fa;
+            padding: 5px;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        
+        .note {
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Mashaaer Enhanced - License Activation</h1>
+    </div>
+    
+    <div class="content">
+        <h2>Activate Your Copy</h2>
+        <p>Please enter your license information to activate Mashaaer Enhanced.</p>
+        
+        <div class="form-group">
+            <label for="licenseKey">License Key:</label>
+            <input type="text" id="licenseKey" placeholder="XXXX-XXXX-XXXX-XXXX" />
+            <div class="note">Format: <span class="key-format">XXXX-XXXX-XXXX-XXXX</span> (letters and numbers)</div>
+        </div>
+        
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" placeholder="Your full name" />
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" placeholder="your.email@example.com" />
+        </div>
+        
+        <button id="activateBtn">Activate License</button>
+        <button id="exitBtn">Exit</button>
+        
+        <div id="errorMessage" class="error" style="display: none;"></div>
+        <div id="successMessage" class="success" style="display: none;"></div>
+        
+        <p class="note">
+            For demo purposes, any license key in the format XXXX-XXXX-XXXX-XXXX will be accepted.<br>
+            Example: ABCD-1234-EFGH-5678
+        </p>
+    </div>
+    
+    <div class="footer">
+        &copy; 2025 Mashaaer Enhanced Team. All rights reserved.
+    </div>
+    
+    <script>
+        // Get elements
+        const licenseKeyInput = document.getElementById('licenseKey');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const activateBtn = document.getElementById('activateBtn');
+        const exitBtn = document.getElementById('exitBtn');
+        const errorMessage = document.getElementById('errorMessage');
+        const successMessage = document.getElementById('successMessage');
+        
+        // Add event listeners
+        activateBtn.addEventListener('click', () => {
+            // Clear previous messages
+            errorMessage.style.display = 'none';
+            successMessage.style.display = 'none';
+            
+            // Get input values
+            const key = licenseKeyInput.value.trim();
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            
+            // Send activation request to main process
+            window.electron.invoke('license:activate', { key, name, email })
+                .then(result => {
+                    if (result.success) {
+                        // Show success message
+                        successMessage.textContent = result.message;
+                        successMessage.style.display = 'block';
+                        
+                        // Close activation window after 2 seconds
+                        setTimeout(() => {
+                            window.electron.send('license:activationComplete');
+                        }, 2000);
+                    } else {
+                        // Show error message
+                        errorMessage.textContent = result.message;
+                        errorMessage.style.display = 'block';
+                    }
+                })
+                .catch(err => {
+                    // Show error message
+                    errorMessage.textContent = 'An error occurred during activation';
+                    errorMessage.style.display = 'block';
+                    console.error(err);
+                });
+        });
+        
+        // Exit button
+        exitBtn.addEventListener('click', () => {
+            window.electron.send('license:exit');
+        });
+        
+        // Format license key as user types
+        licenseKeyInput.addEventListener('input', (e) => {
+            let value = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
+            let formattedValue = '';
+            
+            for (let i = 0; i < value.length && i < 16; i++) {
+                if (i > 0 && i % 4 === 0) {
+                    formattedValue += '-';
+                }
+                formattedValue += value[i];
+            }
+            
+            e.target.value = formattedValue;
+        });
+    </script>
+</body>
+</html>

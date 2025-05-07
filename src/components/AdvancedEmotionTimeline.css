@@ -1,0 +1,250 @@
+/* Advanced Emotion Timeline Styles */
+
+.advanced-timeline {
+  background-color: rgba(40, 42, 54, 0.3);
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+.timeline-controls {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.timeline-controls h2 {
+  color: #bd93f9;
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(189, 147, 249, 0.3);
+}
+
+.mode-selector {
+  background-color: rgba(68, 71, 90, 0.5);
+  border-radius: 25px;
+  display: inline-flex;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.mode-selector button {
+  background: none;
+  border: none;
+  border-radius: 20px;
+  color: #f8f8f2;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 5px;
+  padding: 8px 15px;
+  transition: all 0.2s ease;
+}
+
+.mode-selector button.active {
+  background-color: #bd93f9;
+  box-shadow: 0 2px 8px rgba(189, 147, 249, 0.5);
+  color: #282a36;
+}
+
+.mode-selector button:hover:not(.active) {
+  background-color: rgba(189, 147, 249, 0.2);
+}
+
+/* Detailed Analysis Styles */
+.detailed-analysis {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detailed-stats {
+  background-color: rgba(68, 71, 90, 0.3);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.detailed-stats h3 {
+  color: #8be9fd;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.stat-card {
+  background-color: rgba(68, 71, 90, 0.5);
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h4 {
+  color: #f8f8f2;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  color: #f1fa8c;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.stat-bar {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  height: 8px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.stat-fill {
+  border-radius: 4px;
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+/* Patterns Analysis Styles */
+.patterns-analysis {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.patterns-container {
+  background-color: rgba(68, 71, 90, 0.3);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.patterns-container h3 {
+  color: #ff79c6;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.patterns-grid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.pattern-card {
+  background-color: rgba(68, 71, 90, 0.5);
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pattern-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.pattern-card h4 {
+  color: #f8f8f2;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.pattern-emotion {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.pattern-count {
+  color: #6272a4;
+  font-size: 14px;
+}
+
+/* Loading State */
+.loading-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.loading-spinner {
+  animation: spin 1s linear infinite;
+  border: 4px solid rgba(189, 147, 249, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #bd93f9;
+  height: 40px;
+  margin-bottom: 20px;
+  width: 40px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error State */
+.error-container {
+  align-items: center;
+  background-color: rgba(255, 85, 85, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 200px;
+  padding: 20px;
+  text-align: center;
+}
+
+.error-container h3 {
+  color: #ff5555;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.error-container button {
+  background-color: #ff5555;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+  padding: 8px 15px;
+  transition: background-color 0.2s ease;
+}
+
+.error-container button:hover {
+  background-color: #ff79c6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .advanced-timeline {
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  .stats-grid, .patterns-grid {
+    grid-template-columns: 1fr;
+  }
+}

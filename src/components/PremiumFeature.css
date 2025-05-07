@@ -1,0 +1,117 @@
+/* PremiumFeature Component Styles */
+.premium-feature {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  direction: rtl;
+}
+
+.premium-feature-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.premium-feature-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.premium-badge {
+  background-color: #bd93f9;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.premium-feature-description {
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.premium-feature-content {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.premium-feature-demo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.premium-feature-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  margin-left: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23bd93f9'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 36px;
+}
+
+.premium-feature-stats {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #bd93f9;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.premium-feature-button {
+  background-color: #bd93f9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.premium-feature-button:hover {
+  background-color: #a77bfa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .premium-feature-demo {
+    flex-direction: column;
+  }
+  
+  .premium-feature-icon {
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+  
+  .premium-feature-stats {
+    width: 100%;
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@mashaaer/stores",
+  "version": "1.0.0",
+  "private": true,
+  "description": "State management stores for Mashaaer Enhanced Project",
+  "main": "index.js",
+  "dependencies": {
+    "zustand": "^4.3.8"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}

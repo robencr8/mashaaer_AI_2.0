@@ -1,0 +1,370 @@
+/* Subscription Manager Styles */
+
+.subscription-manager {
+  background-color: #282a36;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: #f8f8f2;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 25px;
+}
+
+.subscription-header {
+  border-bottom: 1px solid #44475a;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.subscription-header h2 {
+  color: #bd93f9;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.plan-badge {
+  background-color: #44475a;
+  border-radius: 15px;
+  display: inline-block;
+  font-weight: bold;
+  padding: 5px 15px;
+}
+
+.plan-badge.free {
+  background-color: #6272a4;
+  color: white;
+}
+
+.plan-badge.premium {
+  background-color: #ffb86c;
+  color: #282a36;
+}
+
+.plan-badge.trial {
+  background-color: #50fa7b;
+  color: #282a36;
+}
+
+/* Premium Features Section */
+.premium-features {
+  background-color: rgba(68, 71, 90, 0.3);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.premium-features h3 {
+  color: #50fa7b;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.features-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.features-list li {
+  background-color: rgba(80, 250, 123, 0.1);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.thank-you-message {
+  color: #ffb86c;
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* Subscription Plans Section */
+.subscription-plans h3 {
+  color: #8be9fd;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.plans-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.plan-card {
+  background-color: rgba(68, 71, 90, 0.5);
+  border-radius: 8px;
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.plan-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+.plan-header {
+  border-bottom: 1px solid #6272a4;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.plan-header h4 {
+  color: #f1fa8c;
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+
+.plan-price {
+  font-size: 16px;
+}
+
+.plan-price .price {
+  color: #50fa7b;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.plan-price .interval {
+  color: #6272a4;
+}
+
+.plan-description {
+  color: #f8f8f2;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  min-height: 60px;
+}
+
+.subscribe-button {
+  background-color: #bd93f9;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 10px 20px;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.subscribe-button:hover {
+  background-color: #ff79c6;
+}
+
+/* PayPal Container */
+.paypal-container {
+  background-color: rgba(68, 71, 90, 0.3);
+  border-radius: 8px;
+  margin-top: 20px;
+  min-height: 100px;
+  padding: 20px;
+}
+
+/* Loading State */
+.subscription-loading {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 200px;
+  text-align: center;
+}
+
+.loading-spinner {
+  animation: spin 1s linear infinite;
+  border: 4px solid rgba(189, 147, 249, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #bd93f9;
+  height: 40px;
+  margin-bottom: 20px;
+  width: 40px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error State */
+.subscription-error {
+  background-color: rgba(255, 85, 85, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.subscription-error h3 {
+  color: #ff5555;
+  margin-bottom: 10px;
+}
+
+.subscription-error button {
+  background-color: #ff5555;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+  padding: 8px 15px;
+  transition: background-color 0.2s ease;
+}
+
+.subscription-error button:hover {
+  background-color: #ff79c6;
+}
+
+/* Trial Features Section */
+.trial-features {
+  margin-bottom: 30px;
+}
+
+.trial-features h3 {
+  color: #50fa7b;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.trial-info {
+  background-color: rgba(80, 250, 123, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  text-align: center;
+}
+
+.trial-icon {
+  font-size: 36px;
+  margin-right: 15px;
+}
+
+.trial-message {
+  color: #f8f8f2;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.days-remaining {
+  color: #50fa7b;
+  font-weight: bold;
+}
+
+.trial-progress {
+  background-color: rgba(68, 71, 90, 0.3);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.progress-label {
+  color: #8be9fd;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  height: 10px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.progress-fill {
+  background-color: #50fa7b;
+  border-radius: 4px;
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+.progress-days {
+  display: flex;
+  justify-content: space-between;
+  color: #6272a4;
+  font-size: 14px;
+}
+
+.trial-cta {
+  background-color: rgba(189, 147, 249, 0.1);
+  border-radius: 8px;
+  margin: 20px 0;
+  padding: 15px;
+  text-align: center;
+}
+
+.trial-cta p {
+  color: #f8f8f2;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.upgrade-from-trial-button {
+  background-color: #ff79c6;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.upgrade-from-trial-button:hover {
+  background-color: #bd93f9;
+  transform: translateY(-2px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .subscription-manager {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .plans-container {
+    flex-direction: column;
+  }
+
+  .plan-card {
+    max-width: none;
+    width: 100%;
+  }
+
+  .trial-info {
+    flex-direction: column;
+  }
+
+  .trial-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .trial-progress {
+    padding: 10px;
+  }
+
+  .upgrade-from-trial-button {
+    width: 100%;
+  }
+}

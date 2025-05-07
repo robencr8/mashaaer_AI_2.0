@@ -1,0 +1,116 @@
+/* PWAInstallPrompt.css */
+
+.pwa-install-prompt {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 400px;
+  background-color: rgba(40, 42, 54, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 16px;
+  z-index: 1000;
+  border: 1px solid #50fa7b;
+  animation: slideUpPWA 0.5s ease-out;
+}
+
+@keyframes slideUpPWA {
+  from {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+.prompt-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.prompt-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.prompt-content p {
+  margin: 0;
+  color: #f8f8f2;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.prompt-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+[dir="rtl"] .prompt-actions {
+  justify-content: flex-start;
+}
+
+.install-button,
+.dismiss-button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.install-button {
+  background-color: #50fa7b;
+  color: #282a36;
+}
+
+.install-button:hover {
+  background-color: #5af78e;
+  transform: translateY(-2px);
+}
+
+.dismiss-button {
+  background-color: transparent;
+  color: #f8f8f2;
+  border: 1px solid rgba(248, 248, 242, 0.3);
+}
+
+.dismiss-button:hover {
+  background-color: rgba(248, 248, 242, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .pwa-install-prompt {
+    width: 95%;
+    bottom: 10px;
+    padding: 12px;
+  }
+  
+  .prompt-content {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .prompt-icon {
+    font-size: 20px;
+  }
+  
+  .prompt-content p {
+    font-size: 13px;
+  }
+  
+  .install-button,
+  .dismiss-button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}

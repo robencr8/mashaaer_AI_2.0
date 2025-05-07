@@ -1,0 +1,6 @@
+@echo off
+echo Running file locking script...
+powershell -ExecutionPolicy Bypass -File "%~dp0lock-files.ps1"
+echo.
+echo Press any key to exit...
+pause > nul

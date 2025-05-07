@@ -1,0 +1,83 @@
+{
+  "onboarding": {
+    "steps": [
+      {
+        "title": "Maligayang pagdating sa Smart Assistant!",
+        "content": "Ang iyong personal na assistant na nakakaunawa at tumutugon sa iyong mga emosyon. Tuklasin natin ang mga pangunahing feature.",
+        "image": "🤖"
+      },
+      {
+        "title": "Voice Input",
+        "content": "Maaari kang direktang makipag-usap sa assistant sa pamamagitan ng pag-click sa microphone button 🎤 sa ibaba ng screen.",
+        "image": "🎤"
+      },
+      {
+        "title": "Pakinggan ang mga Tugon",
+        "content": "Awtomatikong babasahin ng assistant ang mga tugon. Maaari mong i-enable o i-disable ang feature na ito sa pamamagitan ng pag-click sa sound button 🔊.",
+        "image": "🔊"
+      },
+      {
+        "title": "I-customize ang mga Setting",
+        "content": "I-click ang settings button ⚙️ para i-customize ang iyong preferred dialect, tone, at boses.",
+        "image": "⚙️"
+      },
+      {
+        "title": "Pagsusuri ng Emosyon",
+        "content": "Sinusuri ng assistant ang iyong mga emosyon sa pamamagitan ng iyong mga mensahe at tumutugon nang naaangkop. Makikita mo ang mga emotion tag sa bawat mensahe.",
+        "image": "😊"
+      }
+    ],
+    "buttons": {
+      "next": "Susunod",
+      "previous": "Nakaraan",
+      "skip": "Laktawan",
+      "finish": "Tapos na"
+    }
+  },
+  "tooltips": {
+    "settings": "I-click dito para i-customize ang mga setting ng assistant tulad ng dialect, tone, at preferred voice",
+    "clearChat": "I-click dito para burahin ang lahat ng mensahe at magsimula ng bagong pag-uusap",
+    "voiceInput": "I-click dito para direktang makipag-usap sa assistant gamit ang mikropono",
+    "inputField": "Maaari kang mag-type ng anumang tanong o kahilingan dito. Subukan ang mga tanong tulad ng 'Kumusta ka?' o 'Ano ang panahon ngayon?' o 'Ikwento mo sa akin ang isang kuwento'",
+    "sendButton": "I-click dito para ipadala ang iyong mensahe sa assistant",
+    "ttsToggleOn": "I-click para i-disable ang awtomatikong pagbasa ng mga tugon",
+    "ttsToggleOff": "I-click para i-enable ang awtomatikong pagbasa ng mga tugon",
+    "ttsMode": "I-click para lumipat sa pagitan ng mga text-to-speech mode (Flask TTS o Web Speech API)",
+    "emotionTag": "Ito ang mga emosyong nadetect sa mensahe. Sinusuri ng assistant ang mga emosyon para magbigay ng mas empathetic na tugon.",
+    "modelTag": "Ito ang model na ginamit para makabuo ng tugon na ito. Maaaring lokal na model o Flask backend model.",
+    "timestamp": "Ito ang oras kung kailan ipinadala ang mensahe"
+  },
+  "ui": {
+    "assistantTitle": "Smart Assistant",
+    "inputPlaceholder": "Ilagay ang iyong kahilingan dito...",
+    "listening": "🎤 Nakikinig...",
+    "voiceError": "⚠️ Error sa voice recognition. Pakisubukang muli.",
+    "voiceNotSupported": "⚠️ Hindi suportado ang voice recognition sa browser na ito.",
+    "processingError": "Paumanhin, may naganap na error habang pinoproseso ang iyong mensahe. Pakisubukang muli.",
+    "welcomeMessage": "Kumusta! Paano kita matutulungan ngayon?",
+    "clearChatMessage": "Na-clear ang chat. Paano kita matutulungan?",
+    "emptyChat": "Magsimula ng bagong pag-uusap sa Smart Assistant",
+    "testVoice": "Subukan ang Boses",
+    "testVoiceMessage": "Ito ay isang halimbawa ng napiling boses.",
+    "languageToggle": "العربية",
+    "languageSettings": "Mga Setting ng Wika",
+    "browserDetectedLanguage": "Nadetect na wika ng browser: Arabic",
+    "browserDetectedLanguageEn": "Nadetect na wika ng browser: English",
+    "useDetectedLanguage": "Gamitin ang wika ng browser",
+    "languageNotification": "Ang wika ay awtomatikong naka-set batay sa mga setting ng iyong browser. Maaari mo itong baguhin anumang oras.",
+    "dismissNotification": "I-dismiss",
+    "languageName": "Filipino",
+    "languageSelector": "Pumili ng wika:",
+    "switchLanguage": "Palitan ang Wika",
+    "emotionAwareLanguageSuggestion": "Mukhang mas gusto mo ang ibang wika. Gusto mo bang lumipat sa {language}?",
+    "yes": "Oo",
+    "no": "Hindi",
+    "installApp": "I-install ang Mashaaer app ngayon para sa offline experience!"
+  },
+  "meta": {
+    "name": "Filipino",
+    "nativeName": "Filipino",
+    "dir": "ltr",
+    "flag": "🇵🇭"
+  }
+}

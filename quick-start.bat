@@ -1,0 +1,3 @@
+@echo off
+echo Starting Mashaaer Enhanced Project Quick Start...
+powershell -ExecutionPolicy Bypass -File "%~dp0quick-start.ps1"

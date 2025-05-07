@@ -1,0 +1,83 @@
+{
+  "onboarding": {
+    "steps": [
+      {
+        "title": "Akıllı Asistan'a Hoş Geldiniz!",
+        "content": "Duygularınızı anlayan ve yanıtlayan kişisel asistanınız. Temel özellikleri keşfedelim.",
+        "image": "🤖"
+      },
+      {
+        "title": "Sesli Giriş",
+        "content": "Ekranın altındaki mikrofon düğmesine 🎤 tıklayarak doğrudan asistanla konuşabilirsiniz.",
+        "image": "🎤"
+      },
+      {
+        "title": "Yanıtları Dinleyin",
+        "content": "Asistan yanıtları otomatik olarak okuyacaktır. Ses düğmesine 🔊 tıklayarak bu özelliği etkinleştirebilir veya devre dışı bırakabilirsiniz.",
+        "image": "🔊"
+      },
+      {
+        "title": "Ayarları Özelleştirin",
+        "content": "Tercih ettiğiniz lehçeyi, tonu ve sesi özelleştirmek için ayarlar düğmesine ⚙️ tıklayın.",
+        "image": "⚙️"
+      },
+      {
+        "title": "Duygu Analizi",
+        "content": "Asistan, mesajlarınız aracılığıyla duygularınızı analiz eder ve uygun şekilde yanıt verir. Her mesajla birlikte duygu etiketleri göreceksiniz.",
+        "image": "😊"
+      }
+    ],
+    "buttons": {
+      "next": "İleri",
+      "previous": "Geri",
+      "skip": "Atla",
+      "finish": "Bitir"
+    }
+  },
+  "tooltips": {
+    "settings": "Lehçe, ton ve tercih edilen ses gibi asistan ayarlarını özelleştirmek için buraya tıklayın",
+    "clearChat": "Tüm mesajları temizlemek ve yeni bir konuşma başlatmak için buraya tıklayın",
+    "voiceInput": "Mikrofonu kullanarak doğrudan asistanla konuşmak için buraya tıklayın",
+    "inputField": "Buraya herhangi bir soru veya istek yazabilirsiniz. 'Nasılsın?' veya 'Bugün hava nasıl?' veya 'Bana bir hikaye anlat' gibi soruları deneyin",
+    "sendButton": "Mesajınızı asistana göndermek için buraya tıklayın",
+    "ttsToggleOn": "Yanıtların otomatik okunmasını devre dışı bırakmak için tıklayın",
+    "ttsToggleOff": "Yanıtların otomatik okunmasını etkinleştirmek için tıklayın",
+    "ttsMode": "Metin-konuşma modları arasında geçiş yapmak için tıklayın (Flask TTS veya Web Speech API)",
+    "emotionTag": "Bunlar mesajda tespit edilen duygulardır. Asistan, daha empatik bir yanıt sağlamak için duyguları analiz eder.",
+    "modelTag": "Bu, bu yanıtı oluşturmak için kullanılan modeldir. Yerel bir model veya Flask arka uç modeli olabilir.",
+    "timestamp": "Bu, mesajın gönderildiği zamandır"
+  },
+  "ui": {
+    "assistantTitle": "Akıllı Asistan",
+    "inputPlaceholder": "İsteğinizi buraya girin...",
+    "listening": "🎤 Dinliyor...",
+    "voiceError": "⚠️ Ses tanıma hatası. Lütfen tekrar deneyin.",
+    "voiceNotSupported": "⚠️ Ses tanıma bu tarayıcıda desteklenmiyor.",
+    "processingError": "Üzgünüm, mesajınız işlenirken bir hata oluştu. Lütfen tekrar deneyin.",
+    "welcomeMessage": "Merhaba! Bugün size nasıl yardımcı olabilirim?",
+    "clearChatMessage": "Sohbet temizlendi. Size nasıl yardımcı olabilirim?",
+    "emptyChat": "Akıllı Asistan ile yeni bir konuşma başlatın",
+    "testVoice": "Sesi Test Et",
+    "testVoiceMessage": "Bu, seçilen sesin bir örneğidir.",
+    "languageToggle": "العربية",
+    "languageSettings": "Dil Ayarları",
+    "browserDetectedLanguage": "Tarayıcı dili algılandı: Arapça",
+    "browserDetectedLanguageEn": "Tarayıcı dili algılandı: İngilizce",
+    "useDetectedLanguage": "Tarayıcı dilini kullan",
+    "languageNotification": "Dil, tarayıcı ayarlarınıza göre otomatik olarak ayarlandı. İstediğiniz zaman değiştirebilirsiniz.",
+    "dismissNotification": "Kapat",
+    "languageName": "Türkçe",
+    "languageSelector": "Dil seçin:",
+    "switchLanguage": "Dili Değiştir",
+    "emotionAwareLanguageSuggestion": "Başka bir dili tercih edebileceğiniz görünüyor. {language} diline geçmek ister misiniz?",
+    "yes": "Evet",
+    "no": "Hayır",
+    "installApp": "Çevrimdışı deneyim için Mashaaer uygulamasını şimdi yükleyin!"
+  },
+  "meta": {
+    "name": "Turkish",
+    "nativeName": "Türkçe",
+    "dir": "ltr",
+    "flag": "🇹🇷"
+  }
+}
