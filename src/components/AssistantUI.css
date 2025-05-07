@@ -1,5 +1,41 @@
 /* AssistantUI Component Styles */
 
+/* Cosmic Nebula Effect Styles */
+.cosmic-nebula {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(ellipse at center, rgba(25, 118, 210, 0.2) 0%, rgba(25, 118, 210, 0.05) 50%, transparent 100%);
+  opacity: 0.8;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.cosmic-nebula.emotion-transition {
+  animation: nebula-pulse 2s ease;
+}
+
+@keyframes nebula-pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+/* Cosmic Canvas Styles */
+.cosmic-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
 :root {
   --primary-color: #1976d2;
   --primary-hover: #1565c0;

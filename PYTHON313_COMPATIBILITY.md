@@ -2,6 +2,12 @@
 
 This document explains how to run Mashaaer Enhanced with Python 3.13+ and the limitations of doing so.
 
+## Important Notice
+
+**Recommended Python Version: 3.11.x or 3.12.x**
+
+While this guide provides instructions for Python 3.13+, we strongly recommend using Python 3.11.x or 3.12.x for the best compatibility and full functionality. Python 3.13+ has known compatibility issues with several key dependencies.
+
 ## Background
 
 Mashaaer Enhanced was originally designed to work with Python 3.10. Some of the dependencies, particularly the `tokenizers` and `transformers` packages, are not compatible with Python 3.13+. This is because Python 3.13 removed the `pkgutil.ImpImporter` class that these packages depend on.
@@ -79,6 +85,32 @@ If you prefer to set up manually:
 
 For full functionality, including local AI models, please install Python 3.10 and use the original setup scripts.
 
+## Known Issues and Solutions
+
+### PostgreSQL Development Headers
+
+If you encounter an error like `pg_config executable not found` when installing `psycopg2-binary`, you need to install PostgreSQL development headers:
+
+1. Download and install PostgreSQL from https://www.postgresql.org/download/windows/
+2. During installation, make sure to select "Add PostgreSQL binaries to PATH"
+3. If PostgreSQL is already installed but `pg_config` isn't in PATH:
+   - Locate your PostgreSQL bin directory (usually C:\Program Files\PostgreSQL\<version>\bin)
+   - Add this directory to your system environment PATH variable
+
+### Flask and Werkzeug Dependency Conflicts
+
+We've updated the dependencies in `backend/requirements.txt` to use compatible versions:
+- Flask 3.1.0
+- Werkzeug 3.1.3
+- Flask-SQLAlchemy 3.0.3
+- psycopg2-binary 2.9.9
+
+If you still encounter conflicts, try:
+```
+pip uninstall flask flask-sqlalchemy werkzeug -y
+pip install flask==3.1.0 flask-sqlalchemy==3.0.3 werkzeug==3.1.3
+```
+
 ## Troubleshooting
 
 If you encounter issues:
@@ -86,7 +118,7 @@ If you encounter issues:
 1. Make sure Python 3.13+ is installed and in your PATH
 2. Check that you've activated the virtual environment before running the application
 3. If you see errors about missing packages, try running the setup script again
-4. If you need the full functionality, consider installing Python 3.10
+4. If you need the full functionality, consider installing Python 3.11.x or 3.12.x
 
 ## Technical Details
 

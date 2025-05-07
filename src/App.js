@@ -11,6 +11,7 @@ import apiService from './services/apiService.js';
 import voiceService from './services/voiceService.js';
 import memoryService from './services/memoryService.js';
 import themeService from './services/themeService.js';
+import { initializeCosmicVoiceIntegration, ensureCosmicNebulaEffect } from './integration/cosmic_voice_integration.js';
 
 function App() {
   const [showOnboarding, setShowOnboarding] = useState(false);
@@ -32,6 +33,10 @@ function App() {
         window.cosmicTheme.applyTheme();
       }
     }
+
+    // Initialize Cosmic Nebula Effect and voice integration
+    ensureCosmicNebulaEffect();
+    initializeCosmicVoiceIntegration();
 
     // Check if this is the first visit
     const hasVisitedBefore = localStorage.getItem('mashaaer-visited');

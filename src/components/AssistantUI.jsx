@@ -423,6 +423,12 @@ export default function AssistantUI() {
 
   return (
     <div className="assistant-ui" dir={language === 'ar' ? 'rtl' : 'ltr'}>
+      {/* Cosmic Nebula Effect container */}
+      <div className="cosmic-nebula"></div>
+
+      {/* Cosmic Canvas for background animations */}
+      <canvas id="cosmic-canvas" className="cosmic-canvas"></canvas>
+
       {/* Language detection notification */}
       {languageSource === 'browser' && showLanguageNotification && (
         <div className="language-notification">

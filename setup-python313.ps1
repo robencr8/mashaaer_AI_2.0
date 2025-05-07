@@ -57,7 +57,18 @@ if (Test-Path $requirementsFile) {
 
 Write-Host "Setup complete!" -ForegroundColor Green
 Write-Host "Note: Some advanced features requiring transformers/tokenizers will be disabled." -ForegroundColor Yellow
-Write-Host "To use all features, please install Python 3.10 and run the original setup script." -ForegroundColor Yellow
+Write-Host "To use all features, please install Python 3.11.x or 3.12.x and run the original setup script." -ForegroundColor Yellow
+
+# Check if PostgreSQL is installed
+$pgConfigExists = $null -ne (Get-Command pg_config -ErrorAction SilentlyContinue)
+if (-not $pgConfigExists) {
+    Write-Host ""
+    Write-Host "⚠️ PostgreSQL development headers not detected!" -ForegroundColor Red
+    Write-Host "If you encounter 'pg_config executable not found' errors when installing psycopg2-binary:" -ForegroundColor Yellow
+    Write-Host "1. Download and install PostgreSQL from https://www.postgresql.org/download/windows/" -ForegroundColor Yellow
+    Write-Host "2. Make sure to select 'Add PostgreSQL binaries to PATH' during installation" -ForegroundColor Yellow
+    Write-Host "3. Restart this script after installation" -ForegroundColor Yellow
+}
 Write-Host ""
 Write-Host "To activate the virtual environment, run:" -ForegroundColor Cyan
 Write-Host ".\venv\Scripts\Activate.ps1" -ForegroundColor Cyan

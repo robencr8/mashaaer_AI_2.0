@@ -52,7 +52,20 @@ if %ERRORLEVEL% neq 0 (
 echo.
 echo Setup complete!
 echo Note: Some advanced features requiring transformers/tokenizers will be disabled.
-echo To use all features, please install Python 3.10 and run the original setup script.
+echo To use all features, please install Python 3.11.x or 3.12.x and run the original setup script.
+echo.
+
+REM Check if PostgreSQL is installed
+where pg_config >nul 2>&1
+if %ERRORLEVEL% neq 0 (
+    echo.
+    echo WARNING: PostgreSQL development headers not detected!
+    echo If you encounter 'pg_config executable not found' errors when installing psycopg2-binary:
+    echo 1. Download and install PostgreSQL from https://www.postgresql.org/download/windows/
+    echo 2. Make sure to select 'Add PostgreSQL binaries to PATH' during installation
+    echo 3. Restart this script after installation
+)
+
 echo.
 echo To activate the virtual environment, run:
 echo venv\Scripts\activate.bat
